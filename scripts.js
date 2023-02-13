@@ -33,7 +33,7 @@ function addIntentKeyword(intentName, keywords) {
   } else {
     intents.push(newIntent);
   }
-  fs.writeFileSync("./knowledge.json", JSON.stringify(intents));
+  fs.writeFileSync("./knowledge.json", JSON.stringify(intents, null, 4));
   console.log("listo!!");
 }
 
