@@ -3,10 +3,10 @@ const axios = require("axios");
 
 async function getTopWordPairsWithCount(array) {
   try {
-    const response = await axios.post(
-      "https://Training.viktorjjf.repl.co/clustering",
-      { phrases: array, limit: 90 }
-    );
+    const response = await axios.post("http://3.85.10.119:9000/clustering", {
+      phrases: array,
+      limit: 90,
+    });
     return response.data;
   } catch (error) {
     console.log(error);
